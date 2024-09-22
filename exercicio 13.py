@@ -1,7 +1,11 @@
-def celsius_para_fahrenheit(celsius):
-    return (celsius * 9/5) + 32
+soma = 0
+contador = 0
+while True:
+    nota = float(input("Digite uma nota (ou -1 para sair): "))
+    if nota == -1:
+        break
+    soma += nota
+    contador += 1
 
-print("Tabela de Conversão de Celsius para Fahrenheit:")
-for c in range(0, 101, 10):
-    f = celsius_para_fahrenheit(c)
-    print(f"{c}°C = {f:.2f}°F")
+media = soma / contador if contador > 0 else 0
+print("A média das notas é:", media)
